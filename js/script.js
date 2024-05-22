@@ -78,13 +78,15 @@ for (let key in ourTeam) {
     //<p> della card con posto di lavoro dello schiavo
     const positionEl = document.createElement('p')
     positionEl.classList.add('card-text')
+    positionEl.textContent = ourTeam[key].position
 
     //metto h5 e p dentro al body-card
     bodyCardEl.appendChild(teamNameEl)
     bodyCardEl.appendChild(positionEl)
 
     //metto img e body-card dentro al mega contenitore
-    teamEl.appendChild(imgEl, bodyCardEl)
+    teamEl.appendChild(imgEl)
+    teamEl.appendChild(bodyCardEl)
 
     //stampo tutto
     containerEL.appendChild(teamEl)
