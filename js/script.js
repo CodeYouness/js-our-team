@@ -36,3 +36,7 @@ const ourTeam = [{
     position: 'Graphic Designer',
     img: 'barbara-ramos-graphic-designer.jpg'
 }]
+
+for (let key in ourTeam) {
+    console.log(ourTeam[key])
+}
