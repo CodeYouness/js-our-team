@@ -20,32 +20,32 @@ Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 const ourTeam = [{
     teamName: 'Wayne Barnett',
     position: 'Founder & CEO',
-    img: 'wayne-barnett-founder-ceo.jpg'
+    img: './img/wayne-barnett-founder-ceo.jpg'
 },
 {
     teamName: 'Angela Caroll',
     position: 'Chief Editor',
-    img: 'angela-caroll-chief-editor.jpg'
+    img: './img/angela-caroll-chief-editor.jpg'
 },
 {
     teamName: 'Walter Gordon',
     position: 'Office Manager',
-    img: 'walter-gordon-office-manager.jpg'
+    img: './img/walter-gordon-office-manager.jpg'
 },
 {
     teamName: 'Angela Lopez',
     position: 'Social Media Manager',
-    img: 'angela-lopez-social-media-manager.jpg'
+    img: './img/angela-lopez-social-media-manager.jpg'
 },
 {
     teamName: 'Scott Estrada',
     position: 'Developer',
-    img: 'scott-estrada-developer.jpg'
+    img: './img/scott-estrada-developer.jpg'
 },
 {
     teamName: 'Barbara Ramos',
     position: 'Graphic Designer',
-    img: 'barbara-ramos-graphic-designer.jpg'
+    img: './img/barbara-ramos-graphic-designer.jpg'
 }]
 
 const containerEL = document.querySelector('div#main-container')
@@ -79,6 +79,16 @@ for (let key in ourTeam) {
     const positionEl = document.createElement('p')
     positionEl.classList.add('card-text')
 
+    //metto h5 e p dentro al body-card
+    bodyCardEl.appendChild(teamNameEl)
+    bodyCardEl.appendChild(positionEl)
 
-    console.log(ourTeam[key])
+    //metto img e body-card dentro al mega contenitore
+    teamEl.appendChild(imgEl, bodyCardEl)
+
+    //stampo tutto
+    containerEL.appendChild(teamEl)
+
+
+    console.log(ourTeam[key], bodyCardEl)
 }
