@@ -9,7 +9,7 @@ Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 
 /*<div class="col-4">
         <div class="card">
-            <img src="./img/wayne-barnett-founder-ceo.jpg" class="card-img-top" alt="ceo">
+            <img src="./img/wayne-barnett-founder-ceo.jpg" class="card-img-top rounded-0" alt="ceo">
         <div class="card-body text-center">
             <h5 class="card-title">Wayne Barnett</h5>
             <p class="card-text">Founder & CEO</p>
@@ -59,11 +59,11 @@ for (let key in ourTeam) {
 
     //contenitore con classe card
     const cardEl = document.createElement('div')
-    cardEl.classList.add('card')
+    cardEl.classList.add('card', 'border-0', 'mb-5', 'rounded-0')
 
     //contenitore immagine
     const imgEl = document.createElement('img')
-    imgEl.classList.add('card-img-top')
+    imgEl.classList.add('card-img-top', 'rounded-0')
     imgEl.src = ourTeam[key].img
 
     //contenitore body della card
@@ -85,8 +85,9 @@ for (let key in ourTeam) {
     bodyCardEl.appendChild(positionEl)
 
     //metto img e body-card dentro al mega contenitore
-    teamEl.appendChild(imgEl)
-    teamEl.appendChild(bodyCardEl)
+    cardEl.appendChild(imgEl)
+    cardEl.appendChild(bodyCardEl)
+    teamEl.appendChild(cardEl)
 
     //stampo tutto
     containerEL.appendChild(teamEl)
