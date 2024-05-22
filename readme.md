@@ -15,3 +15,13 @@
 - Ragioniamo come sempre a step.
     - Prima la logica in italiano e poi traduciamo in codice.
 - E ricordiamoci che console.log() è nostro amico!
+
+### Human code
+- mi collego ad un contenitore nel DOM
+- creo array di oggetti diviso per membro
+    - ogni membro ha: nome, ruolo e foto
+- per ogni membro(x3 volte):
+    - creo un elemento
+    - stampo tutto, cioè nome, ruolo e foto
+    - aggiungo all'elemento le informazioni
+    - aggiungo l elemento al contenitore creato nel DOM
